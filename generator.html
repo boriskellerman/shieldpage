@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Legal Pages — ShieldPage</title>
+  <meta name="description" content="Generate a customized privacy policy, terms of service, cookie policy, and more in minutes.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="generator-page">
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        ShieldPage
+      </a>
+      <div class="nav-links">
+        <span id="premium-badge" class="hero-badge" style="display:none;margin:0;font-size:12px;padding:4px 12px;">✨ Premium</span>
+        <a href="index.html" class="btn btn-ghost btn-sm">← Back</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Progress Bar -->
+  <div class="container-sm">
+    <div class="progress-bar">
+      <div class="progress-step active">
+        <div class="step-num">1</div>
+        <div class="step-label">Business</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="step-num">2</div>
+        <div class="step-label">Data</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="step-num">3</div>
+        <div class="step-label">Services</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="step-num">4</div>
+        <div class="step-label">Regions</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="step-num">5</div>
+        <div class="step-label">Options</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="step-num">6</div>
+        <div class="step-label">Preview</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wizard Form -->
+  <div class="wizard-form">
+
+    <!-- Step 1: Business Info -->
+    <div class="form-step active" data-step="1">
+      <h2>Tell us about your business</h2>
+      <p class="step-desc">Basic information to customize your legal pages.</p>
+
+      <div class="form-group">
+        <label for="businessName">Business / Website Name *</label>
+        <input type="text" id="businessName" placeholder="e.g., Acme Inc." required>
+      </div>
+
+      <div class="form-group">
+        <label for="websiteUrl">Website URL *</label>
+        <input type="url" id="websiteUrl" placeholder="e.g., https://acme.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactEmail">Contact Email *</label>
+        <input type="email" id="contactEmail" placeholder="e.g., privacy@acme.com" required>
+        <div class="hint">This will appear in your legal documents as the contact for privacy inquiries.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="businessType">Business Type</label>
+        <select id="businessType">
+          <option value="general">General / Other</option>
+          <option value="blog">Blog / Content Site</option>
+          <option value="ecommerce">E-Commerce / Online Store</option>
+          <option value="saas">SaaS / Software</option>
+          <option value="consulting">Consulting / Services</option>
+          <option value="education">Education / Online Course</option>
+          <option value="health">Health / Wellness</option>
+          <option value="finance">Finance / Fintech</option>
+          <option value="legal">Legal Services</option>
+        </select>
+      </div>
+
+      <div class="wizard-nav">
+        <div></div>
+        <button class="btn btn-primary" data-action="next">Next: Data Collection →</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Data Collection -->
+    <div class="form-step" data-step="2">
+      <h2>What data do you collect?</h2>
+      <p class="step-desc">Select all types of personal data your website collects from visitors or users.</p>
+
+      <div class="checkbox-grid">
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-email" checked>
+          <div>
+            <div class="cb-label">Email Address</div>
+            <div class="cb-desc">Contact forms, newsletters, accounts</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-name" checked>
+          <div>
+            <div class="cb-label">Name</div>
+            <div class="cb-desc">First name, last name, display name</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-phone">
+          <div>
+            <div class="cb-label">Phone Number</div>
+            <div class="cb-desc">Contact, SMS verification, support</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-address">
+          <div>
+            <div class="cb-label">Mailing Address</div>
+            <div class="cb-desc">Shipping, billing, physical correspondence</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-payment">
+          <div>
+            <div class="cb-label">Payment Information</div>
+            <div class="cb-desc">Credit cards, billing details</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-usage" checked>
+          <div>
+            <div class="cb-label">Usage Data</div>
+            <div class="cb-desc">Pages visited, clicks, time spent</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-cookies" checked>
+          <div>
+            <div class="cb-label">Cookies</div>
+            <div class="cb-desc">Session cookies, tracking cookies</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-location">
+          <div>
+            <div class="cb-label">Location Data</div>
+            <div class="cb-desc">IP-based or GPS location</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="collect-device" checked>
+          <div>
+            <div class="cb-label">Device Information</div>
+            <div class="cb-desc">Browser, OS, screen size, IP address</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn btn-ghost" data-action="prev">← Back</button>
+        <button class="btn btn-primary" data-action="next">Next: Third-Party Services →</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Third-Party Services -->
+    <div class="form-step" data-step="3">
+      <h2>Third-party services</h2>
+      <p class="step-desc">Do you use any of these external services? This affects your privacy disclosures.</p>
+
+      <div class="checkbox-grid" style="margin-bottom:24px;">
+        <label class="checkbox-item">
+          <input type="checkbox" id="uses-analytics" checked>
+          <div>
+            <div class="cb-label">Analytics</div>
+            <div class="cb-desc">Google Analytics, Plausible, etc.</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="uses-ads">
+          <div>
+            <div class="cb-label">Advertising</div>
+            <div class="cb-desc">Google Ads, Facebook Ads, etc.</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="uses-social-login">
+          <div>
+            <div class="cb-label">Social Login</div>
+            <div class="cb-desc">Google, Facebook, GitHub sign-in</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="shares-data">
+          <div>
+            <div class="cb-label">Data Sharing</div>
+            <div class="cb-desc">Share data with third-party partners</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="form-group" id="analyticsProviderGroup" style="display:none;">
+        <label for="analyticsProvider">Analytics Provider</label>
+        <select id="analyticsProvider">
+          <option value="Google Analytics">Google Analytics</option>
+          <option value="Plausible">Plausible</option>
+          <option value="Fathom">Fathom</option>
+          <option value="Matomo">Matomo</option>
+          <option value="Mixpanel">Mixpanel</option>
+          <option value="">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="adsProviderGroup" style="display:none;">
+        <label for="adsProvider">Advertising Provider</label>
+        <select id="adsProvider">
+          <option value="Google Ads">Google Ads</option>
+          <option value="Facebook Ads">Facebook Ads</option>
+          <option value="Microsoft Advertising">Microsoft Advertising</option>
+          <option value="">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="loginProvidersGroup" style="display:none;">
+        <label for="loginProviders">Social Login Providers</label>
+        <input type="text" id="loginProviders" placeholder="e.g., Google, Facebook, GitHub">
+      </div>
+
+      <div class="form-group" id="thirdPartyNamesGroup" style="display:none;">
+        <label for="thirdPartyNames">Third-Party Partner Names</label>
+        <input type="text" id="thirdPartyNames" placeholder="e.g., Stripe, Mailchimp, HubSpot">
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn btn-ghost" data-action="prev">← Back</button>
+        <button class="btn btn-primary" data-action="next">Next: Compliance Regions →</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Compliance Regions -->
+    <div class="form-step" data-step="4">
+      <h2>Where are your visitors?</h2>
+      <p class="step-desc">Select the regions where your visitors are located. This determines which compliance sections to include.</p>
+
+      <div class="checkbox-grid">
+        <label class="checkbox-item">
+          <input type="checkbox" id="region-us" checked>
+          <div>
+            <div class="cb-label">🇺🇸 United States</div>
+            <div class="cb-desc">CCPA / CPRA (California) compliance</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="region-eu">
+          <div>
+            <div class="cb-label">🇪🇺 European Union</div>
+            <div class="cb-desc">GDPR compliance (Premium)</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="region-uk">
+          <div>
+            <div class="cb-label">🇬🇧 United Kingdom</div>
+            <div class="cb-desc">UK GDPR compliance (Premium)</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="region-ca">
+          <div>
+            <div class="cb-label">🇨🇦 Canada</div>
+            <div class="cb-desc">PIPEDA compliance (Premium)</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="region-au">
+          <div>
+            <div class="cb-label">🇦🇺 Australia</div>
+            <div class="cb-desc">Australian Privacy Principles</div>
+          </div>
+        </label>
+      </div>
+
+      <div style="margin-top:20px;">
+        <div class="form-group">
+          <label for="governingLaw">Governing Law (State / Country)</label>
+          <input type="text" id="governingLaw" placeholder="e.g., State of Ohio, United States">
+          <div class="hint">Where legal disputes would be handled. Usually your business location.</div>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn btn-ghost" data-action="prev">← Back</button>
+        <button class="btn btn-primary" data-action="next">Next: Additional Options →</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Additional Options -->
+    <div class="form-step" data-step="5">
+      <h2>Additional options</h2>
+      <p class="step-desc">Fine-tune your legal documents with these additional settings.</p>
+
+      <h3 style="font-size:16px;font-weight:600;margin-bottom:16px;color:var(--text);">Site Features</h3>
+      <div class="checkbox-grid" style="margin-bottom:24px;">
+        <label class="checkbox-item">
+          <input type="checkbox" id="has-accounts">
+          <div>
+            <div class="cb-label">User Accounts</div>
+            <div class="cb-desc">Users can create accounts / sign up</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="allows-ugc">
+          <div>
+            <div class="cb-label">User Content</div>
+            <div class="cb-desc">Users can post, upload, or share content</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="has-affiliates">
+          <div>
+            <div class="cb-label">Affiliate Links</div>
+            <div class="cb-desc">You earn commissions from referrals</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="provides-advice">
+          <div>
+            <div class="cb-label">Provides Advice</div>
+            <div class="cb-desc">Health, financial, legal, or professional advice</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="sells-data">
+          <div>
+            <div class="cb-label">Sells / Shares Data</div>
+            <div class="cb-desc">You sell or share personal data commercially</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="children-under-13">
+          <div>
+            <div class="cb-label">Children Under 13</div>
+            <div class="cb-desc">Site may be used by children (COPPA)</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="offers-subscription">
+          <div>
+            <div class="cb-label">Subscriptions</div>
+            <div class="cb-desc">Recurring billing / subscription plans</div>
+          </div>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" id="has-arbitration">
+          <div>
+            <div class="cb-label">Arbitration Clause</div>
+            <div class="cb-desc">Require arbitration for disputes</div>
+          </div>
+        </label>
+      </div>
+
+      <h3 style="font-size:16px;font-weight:600;margin-bottom:16px;color:var(--text);">Refund Policy</h3>
+      <div class="form-group">
+        <label for="refundType">Refund Type</label>
+        <select id="refundType">
+          <option value="full">Full refund (money-back guarantee)</option>
+          <option value="partial">Case-by-case refunds</option>
+          <option value="store-credit">Store credit only</option>
+          <option value="none">No refunds (all sales final)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="refundWindow">Refund Window (days)</label>
+        <input type="text" id="refundWindow" placeholder="30" value="30">
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn btn-ghost" data-action="prev">← Back</button>
+        <button class="btn btn-accent" data-action="next">Generate Documents →</button>
+      </div>
+    </div>
+
+    <!-- Step 6: Preview & Download -->
+    <div class="form-step" data-step="6">
+      <h2>Your Legal Documents</h2>
+      <p class="step-desc">Review, copy, or download your customized legal pages.</p>
+
+      <div class="preview-container">
+        <div class="preview-tabs" id="preview-tabs">
+          <!-- Rendered by JS -->
+        </div>
+        <div class="preview-content" id="preview-content">
+          <!-- Rendered by JS -->
+        </div>
+        <div class="preview-actions">
+          <button class="btn btn-primary btn-sm" id="btn-copy">📋 Copy</button>
+          <button class="btn btn-outline btn-sm" id="btn-download-md">⬇ Markdown</button>
+          <button class="btn btn-outline btn-sm" id="btn-download-html">⬇ HTML</button>
+          <button class="btn btn-accent btn-sm" id="btn-download-all">⬇ Download All (Premium)</button>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn btn-ghost" data-action="prev">← Edit Answers</button>
+        <div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/templates.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
